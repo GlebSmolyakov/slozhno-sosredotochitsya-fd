@@ -23,7 +23,7 @@
     align-self: flex-start;
 }
 
-.header__bulb:after{
+.header__bulb:after {
     content: '';
     margin: 10px;
     width: 25px;
@@ -319,7 +319,7 @@
         padding: 20px;
     }
 
-    .main .main__section--why-focus{
+    .main .main__section--why-focus {
         display: grid;
         grid-template-columns: min(236px) 1fr;
         padding: 60px 20px 0;
