@@ -453,6 +453,7 @@
     .header__title {
         grid-column: 1 / span 3;
         grid-row: 3;
+        padding-bottom: 10px;
     }
 
     .header__about {
