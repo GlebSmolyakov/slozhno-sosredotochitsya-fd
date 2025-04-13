@@ -191,6 +191,7 @@
 }
 
 .main__section-content-text-link {
+    display: inline-block;
     text-decoration: none;
     text-shadow: 2px 2px 0 var(--accent-color);
 }
