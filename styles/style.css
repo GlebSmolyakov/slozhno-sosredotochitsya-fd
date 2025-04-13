@@ -279,7 +279,7 @@
 
 @media (width >= 765px) {
     .header {
-        grid-template-rows: 100px repeat(3, 1fr) 100px;
+        grid-template-rows: 90px repeat(3, 1fr) 100px;
     }
 
     .header__bulb-text:before {
@@ -298,6 +298,7 @@
 
     .header__theme-menu {
         align-self: center;
+        padding-top: 20px;
     }
 
     .header__theme-menu-list {
