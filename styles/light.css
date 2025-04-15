@@ -15,6 +15,7 @@
     --text-color: #353430;
     --title-text-color: #353430;
     --outline-color: #32312D66;
+    --bg-color: #FFF1F7;
 }
 
 @media (prefers-color-scheme: light) {
@@ -24,6 +25,8 @@
         --title-color: #FFC2E6;
         --text-color: #353430;
         --title-text-color: #353430;
+        --bg-color: #FFF1F7;
+
         .header__bulb-text {
             display: none;
         }
