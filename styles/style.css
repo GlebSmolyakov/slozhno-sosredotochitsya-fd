@@ -27,8 +27,8 @@
 .header__bulb:after {
     content: '';
     margin: 10px;
-    inline-size: 25px;
-    block-size: 25px;
+    height: 25px;
+    width: 25px;
     background-color: transparent;
     border-top: 1px solid var(--accent-color);
     border-right: 1px solid var(--accent-color);
@@ -143,8 +143,8 @@
 
 .header__border:after {
     content: '';
-    max-inline-size: 25px;
-    max-block-size: 25px;
+    height: 25px;
+    width: 25px;
     background-color: transparent;
     border-bottom: 1px solid var(--accent-color);
     border-left: 1px solid var(--accent-color);
@@ -270,8 +270,8 @@
 .footer__decor-top:after {
     content: '';
     margin: 10px;
-    inline-size: 25px;
-    block-size: 25px;
+    height: 25px;
+    width: 25px;
     background-color: transparent;
     border-top: 1px solid var(--accent-color);
     border-right: 1px solid var(--accent-color);
@@ -280,8 +280,8 @@
 .footer__decor-bottom:before {
     content: '';
     margin: 10px;
-    inline-size: 25px;
-    block-size: 25px;
+    height: 25px;
+    width: 25px;
     background-color: transparent;
     border-bottom: 1px solid var(--accent-color);
     border-left: 1px solid var(--accent-color);
