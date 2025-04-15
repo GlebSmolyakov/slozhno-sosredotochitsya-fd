@@ -4,12 +4,12 @@
 */
 
 :root {
-    --back-img: url('../images/cover-image-dark.png');
-    --accent-color: #ff0070;
-    --title-color: #DB00FF;
-    --text-color: #F1B2CE;
-    --title-text-color: #000028;
-    --outline-color: #FF007066;
-    --bg-color: #000028;
-    --border-color: #ff0070;
+  --back-img: url('../images/cover-image-dark.png');
+  --accent-color: #ff0070;
+  --title-color: #db00ff;
+  --text-color: #f1b2ce;
+  --title-text-color: #000028;
+  --outline-color: #ff007066;
+  --bg-color: #000028;
+  --border-color: #ff0070;
 }

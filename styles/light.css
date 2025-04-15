@@ -9,37 +9,36 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
-    --back-img: url('../images/cover-image-light.png');
-    --accent-color: #FF8DCB;
-    --title-color: #FFC2E6;
-    --text-color: #353430;
-    --title-text-color: #353430;
-    --outline-color: #32312D66;
-    --bg-color: #FFF1F7;
-    --border-color: #353430;
+  --back-img: url('../images/cover-image-light.png');
+  --accent-color: #ff8dcb;
+  --title-color: #ffc2e6;
+  --text-color: #353430;
+  --title-text-color: #353430;
+  --outline-color: #32312d66;
+  --bg-color: #fff1f7;
+  --border-color: #353430;
 }
 
 @media (prefers-color-scheme: light) {
-    :root {
-        --back-img: url('../images/cover-image-light.png');
-        --accent-color: #FF8DCB;
-        --title-color: #FFC2E6;
-        --text-color: #353430;
-        --title-text-color: #353430;
-        --outline-color: #32312D66;
-        --bg-color: #FFF1F7;
-        --border-color: #353430;
+  :root {
+    --back-img: url('../images/cover-image-light.png');
+    --accent-color: #ff8dcb;
+    --title-color: #ffc2e6;
+    --text-color: #353430;
+    --title-text-color: #353430;
+    --outline-color: #32312d66;
+    --bg-color: #fff1f7;
+    --border-color: #353430;
 
-        .header__bulb-text {
-            display: none;
-        }
-
+    .header__bulb-text {
+      display: none;
     }
+  }
 }
 
 .theme-light .page {
   /* Вам также нужно будет написать ряд подобных селекторов */
-    .header__bulb-text {
-        display: none;
-    }
+  .header__bulb-text {
+    display: none;
+  }
 }
