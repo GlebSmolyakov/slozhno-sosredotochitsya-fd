@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="color-scheme" content="dark light">
-    <title>no focus</title>
+    <title>Сложно сосредоточиться</title>
     <link rel="icon" href="./images/favicon.ico" sizes="any">
     <link rel="icon" href="./images/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="./images/mobile-icon.png">
@@ -19,11 +19,9 @@
   </head>
   <body class="page">
     <header class="header decorated-zone">
-      <div class="header__bulb">
-        <span class="header__bulb-text" aria-hidden="true">
+      <span class="header__bulb-text" aria-hidden="true">
           REC
-        </span>
-      </div>
+      </span>
       <nav class="header__theme-menu">
         <ul class="header__theme-menu-list">
           <li class="header__theme-menu-item">
@@ -60,8 +58,6 @@
           Что делать, когда не можешь делать ничего <br>
           Или почему нам так сложно сконцентрироваться, особенно когда очень надо
         </p>
-      </div>
-      <div class="header__border">
       </div>
     </header>
   <main class="main">
@@ -226,48 +222,54 @@
       <h2 class=" title-decor main__section-title-text main__section-content-title ">
         А можно в картинках?
       </h2>
-      <div class="image__container">
-        <img
-          loading="lazy"
-          src="images/sunset.png"
-          alt="закат на фоне гор"
-          class="image__img image__img--sunset"
-        >
-        <img
-          loading="lazy"
-          src="images/ice-cream.png"
-          alt="украшенное мороженое в тарелки"
-          class="image__img image__img--ice-cream"
-        >
-        <img
-          loading="lazy"
-          src="images/tape.png"
-          alt="касcета"
-          class="image__img image__img--tape"
-        >
-        <img
-          loading="lazy"
-          src="images/books.png" 
-          alt="стопка книг"
-          class="image__img image__img--books"
-        >
-        <img
-          loading="lazy"
-          src="images/street.png"
-          alt="улица"
-          class="image__img image__img--street"
-        >
-      </div>
+      <ul class="image__container">
+        <li class="image__container-item image__img--sunset">
+          <img
+            loading="lazy"
+            src="images/sunset.png"
+            alt="закат на фоне гор"
+            class="image__img"
+          >
+        </li>
+        <li class="image__container-item image__img--ice-cream">
+          <img
+            loading="lazy"
+            src="images/ice-cream.png"
+            alt="украшенное мороженое в тарелки"
+            class="image__img"
+          >
+        </li>
+        <li class="image__container-item image__img--tape">
+          <img
+            loading="lazy"
+            src="images/tape.png"
+            alt="касcета"
+            class="image__img"
+          >
+        </li>
+        <li class="image__container-item image__img--books">
+          <img
+            loading="lazy"
+            src="images/books.png"
+            alt="стопка книг"
+            class="image__img"
+          >
+        </li>
+        <li class="image__container-item image__img--street">
+          <img
+            loading="lazy"
+            src="images/street.png"
+            alt="улица"
+            class="image__img"
+          >
+        </li>
+      </ul>
     </section>
   </main>
-  <footer class="footer">
-    <div class="footer__decor-top">
-    </div>
+  <footer class="footer decorated-zone">
     <p class="footer__text title-text">
       focus
     </p>
-    <div class="footer__decor-bottom">
-    </div>
   </footer>
   </body>
 </html>

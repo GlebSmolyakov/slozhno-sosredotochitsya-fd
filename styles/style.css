@@ -6,44 +6,51 @@
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    font-family: 'IBM Plex mono', sans-serif;
+    font-family: 'IBM Plex mono', 'monospace', sans-serif;
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
 }
 
 .header {
     display: grid;
-    grid-template-rows: 75px min-content 1fr min-content 65px;
+    grid-template-rows: min-content repeat(3 , 1fr) min-content;
     block-size: 100vh;
+    min-block-size: 668px;
 }
 
-.header__bulb {
-    color: var(--accent-color);
-    position: relative;
-    display: flex;
-    justify-self: flex-end;
-    align-self: flex-start;
-}
-
-.header__bulb:before {
+.decorated-zone:before {
     content: '';
+    justify-self: flex-end;
+    margin-block-start: 10px;
+    margin-inline-end: 10px;
+    height: 25px;
+    width: 25px;
+    background-color: transparent;
+    border-top: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+}
+
+.decorated-zone::after {
+    content: '';
+    align-self: flex-end;
     margin: 10px;
     height: 25px;
     width: 25px;
     background-color: transparent;
-    border-top: 1px solid var(--accent-color);
-    border-right: 1px solid var(--accent-color);
+    border-bottom: 1px solid var(--border-color);
+    border-left: 1px solid var(--border-color);
 }
 
 .header__bulb-text {
+    color: var(--accent-color);
     content: "REC";
     font-size: 18px;
     position: absolute;
     top: 10px;
-    right: 38px;
+    right: 39px;
     text-transform: uppercase;
 }
 
-.header__bulb-text:after {
+.header__bulb-text::after {
     content: "";
     position: absolute;
     top: 8px;
@@ -58,8 +65,8 @@
 
 .header__theme-menu {
     justify-self: flex-end;
-    align-self: flex-start;
-    color: var(--accent-color);
+    align-self: center;
+    color: var(--border-color);
     text-transform: uppercase;
     font-size: 18px;
 }
@@ -69,16 +76,17 @@
     flex-direction: column;
     gap: 10px;
     margin-right: 10px;
+    padding-block-end: 15px;
 }
 
 .header__theme-menu-item {
     display: block;
-    block-size: 26px;
+    min-block-size: 26px;
 }
 
 .header__theme-menu-button {
     display: block;
-    inline-size: 70px;
+    min-inline-size: 70px;
 }
 
 .header__theme-menu-button:hover {
@@ -91,11 +99,11 @@
 }
 
 .header__theme-menu-button:focus-visible {
-    border-block-end: 1px solid var(--accent-color);
+    border-block-end: 1px solid var(--border-color);
 }
 
 .header__theme-menu-button_active {
-    border: 1px solid var(--accent-color);
+    border: 1px solid var(--border-color);
     pointer-events: none;
 }
 
@@ -119,7 +127,8 @@
 .header__about {
     justify-self: flex-end;
     align-self: center;
-    margin: 0 10px;
+    margin-inline: 10px;
+    padding-block-start: 35px;
     max-inline-size: 364px;
 }
 
@@ -140,15 +149,6 @@
     align-items: flex-end;
     justify-content: flex-start;
     padding: 10px;
-}
-
-.header__border:after {
-    content: '';
-    height: 25px;
-    width: 25px;
-    background-color: transparent;
-    border-bottom: 1px solid var(--accent-color);
-    border-left: 1px solid var(--accent-color);
 }
 
 .main__section-content-title {
@@ -239,14 +239,17 @@
     padding-block-end: 5px;
 }
 
-.image__img:last-of-type {
-    padding-block-end: 37px;
+.image__container-item:last-of-type {
+    padding-block-end: 31px;
 }
 
 .footer {
     block-size: 100vh;
     display: grid;
-    grid-template-rows: 100px 1fr 100px;
+}
+
+footer .decorated-zone::after {
+    justify-self: flex-end;
 }
 
 .footer__text {
@@ -256,44 +259,14 @@
     align-self: center;
 }
 
-.footer__decor-top {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-end;
-}
-
-.footer__decor-bottom {
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
-}
-
-.footer__decor-top:after {
-    content: '';
-    margin: 10px;
-    height: 25px;
-    width: 25px;
-    background-color: transparent;
-    border-top: 1px solid var(--accent-color);
-    border-right: 1px solid var(--accent-color);
-}
-
-.footer__decor-bottom:before {
-    content: '';
-    margin: 10px;
-    height: 25px;
-    width: 25px;
-    background-color: transparent;
-    border-bottom: 1px solid var(--accent-color);
-    border-left: 1px solid var(--accent-color);
-}
 
 @media (width >= 765px) {
-    .header {
-        grid-template-rows: 100px repeat(3, 1fr) 100px;
+
+    .decorated-zone:before {
+        margin: 20px;
     }
 
-    .header__bulb:before {
+    .decorated-zone::after {
         margin: 20px;
     }
 
@@ -302,12 +275,9 @@
         right: 48px;
     }
 
-
-    .header__theme-menu {
-        align-self: center;
-    }
-
     .header__theme-menu-list {
+        padding-block-end: 0;
+        padding-block-start: 50px;
         margin-inline-end: 20px;
     }
 
@@ -322,7 +292,7 @@
     .header__about {
         margin-block: 0;
         margin-inline: 20px;
-        padding-block-end: 5px;
+        padding-block-end: 90px;
     }
 
     .header__border {
@@ -384,7 +354,7 @@
         margin-inline: 20px;
     }
 
-    .image__img:last-of-type {
+    .image__container-item:last-of-type {
         padding: 0;
     }
 
@@ -450,6 +420,17 @@
 @media (width >= 1020px) {
     .header {
         grid-template-columns: 1fr auto 1fr;
+        grid-template-rows: repeat(3 , 1fr);
+    }
+
+    .header.decorated-zone:before {
+        grid-column: 3;
+        grid-row: 1;
+    }
+
+    .header.decorated-zone::after {
+        grid-column: 1;
+        grid-row: 3 ;
     }
 
     .header__bulb {
@@ -467,26 +448,27 @@
     }
 
     .header__theme-menu-list {
+        padding-block-start: 0;
+    }
+
+    .header__theme-menu-list {
         flex-direction: row;
     }
 
     .header__title {
         grid-column: 1 / span 3;
-        grid-row: 3;
-        padding-bottom: 10px;
+        grid-row: 2;
     }
 
     .header__about {
         grid-column: span 3;
-        grid-row: 4;
+        grid-row: 3;
         max-inline-size: 491px;
+        align-self: flex-start;
+        padding-block-end: 0;
         padding-block-start: 50px;
     }
 
-    .header__border {
-        grid-column: 1;
-        grid-row: 5;
-    }
 
     .main .main__section--why-focus {
         grid-template-columns: min(314px) 1fr;
